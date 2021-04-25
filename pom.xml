@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cursedplanet</groupId>
+    <artifactId>cursedplugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <repositories>
+        <repository>
+            <id>spigotmc-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+
+    <dependencies>
+
+        <!--
+           Import the Spigot API since it's necessary for our plugin
+           Make sure you change the version to the latest version you want to use for your plugin.
+       -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+
+            <!-- Change this to the latest version to stay up to date -->
+            <version>1.16.5-R0.1-SNAPSHOT</version>
+
+            <!--
+               The scope indicates if this library should be packaged together with our plugin
+               when we want to publish it.
+               Set this to "compile" if you want all classes from this library to be copied
+               to your plugin's jar, otherwise set this to "provided".
+           -->
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.plusgithub</groupId>
+            <artifactId>CursedLibrary</artifactId>
+            <version>5b87598</version>
+        </dependency>
+
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>
